@@ -2,7 +2,7 @@ package com.example.soccer_leauge.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class WeekMatches {
+public class WeekMatchesModel {
 
     @SerializedName("team1")
     private String team1;

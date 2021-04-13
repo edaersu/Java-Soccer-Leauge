@@ -1,57 +1,41 @@
 package com.example.soccer_leauge.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-
 import com.example.soccer_leauge.R;
-import com.example.soccer_leauge.model.WeekMatches;
-import com.example.soccer_leauge.service.IFixture;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.util.ArrayList;
+import com.example.soccer_leauge.databinding.ActivityFixturePageBinding;
+import com.example.soccer_leauge.model.WeekMatchesModel;
+import com.example.soccer_leauge.viewModel.FixtureViewModel;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class FixturePage extends AppCompatActivity {
+
+    private ActivityFixturePageBinding activityFixturePageBinding;
+    private FixtureViewModel weekmodel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fixture_page);
+        //setContentView(R.layout.activity_fixture_page);
 
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
-        Retrofit retrofit =new Retrofit.Builder().baseUrl("https://soccer-leauge-default-rtdb.firebaseio.com/").addConverterFactory(GsonConverterFactory.create(gson)).build();
+        activityFixturePageBinding= DataBindingUtil.setContentView(this,R.layout.activity_fixture_page);
 
-        IFixture ifixture=retrofit.create(IFixture.class);
-        Call<List<WeekMatches>> call=ifixture.getLeauges();
-
-        call.enqueue((new Callback<List<WeekMatches>>() {
+        weekmodel=ViewModelProviders.of(this).get(FixtureViewModel.class);
+        weekmodel.getWeekly().observe(this, new Observer<List<WeekMatchesModel>>() {
             @Override
-            public void onResponse(Call<List<WeekMatches>> call, Response<List<WeekMatches>> response) {
-                if(!response.isSuccessful()){
-
-
-                }
-                List<WeekMatches> teams=response.body();
-                System.out.println("body");
-                System.out.println(response.body());
-
+            public void onChanged(List<WeekMatchesModel> weekMatches) {
+                System.out.println("SİZE");
+                System.out.println(weekMatches.size());
+                System.out.println(weekMatches.get(4).getTeam1());
             }
-            @Override
-            public void onFailure(Call<List<WeekMatches>> call, Throwable t) {
-                System.out.println("error");
-                System.out.println(t.getMessage());
-            }
-        }));
+        });
+
+
+
 
     }
 }

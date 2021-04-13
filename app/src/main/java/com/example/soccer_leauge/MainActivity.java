@@ -6,24 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import com.example.soccer_leauge.model.TeamModel;
-import com.example.soccer_leauge.service.ITeam;
-import com.example.soccer_leauge.view.HomePage;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import com.example.soccer_leauge.databinding.ActivityHomePageBinding;
+import com.example.soccer_leauge.view.TeamPage;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, HomePage.class);//Optional parameters
+                Intent myIntent = new Intent(MainActivity.this, TeamPage.class);//Optional parameters
                 MainActivity.this.startActivity(myIntent);
             }
         });

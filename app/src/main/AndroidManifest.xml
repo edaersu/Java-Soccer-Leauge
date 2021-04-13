@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.FixturePage"></activity>
-        <activity android:name=".view.HomePage" />
+        <activity android:name=".view.Kotlindeneme"></activity>
+        <activity android:name=".view.FixturePage" />
+        <activity android:name=".view.TeamPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

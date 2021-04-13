@@ -9,6 +9,11 @@ public class TeamModel {
     @SerializedName("id")
     private int id;
 
+    public TeamModel(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
