@@ -2,11 +2,16 @@ package com.example.soccer_leauge;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.soccer_leauge.model.TeamModel;
 import com.example.soccer_leauge.service.ITeam;
+import com.example.soccer_leauge.view.HomePage;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -18,46 +23,25 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class MainActivity extends AppCompatActivity {
 
-    TextView tv;
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv=findViewById(R.id.team_name);
-
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
-        Retrofit retrofit =new Retrofit.Builder().baseUrl("https://soccer-leauge-default-rtdb.firebaseio.com/").addConverterFactory(GsonConverterFactory.create(gson)).build();
-
-        ITeam iteam=retrofit.create(ITeam.class);
-        Call<List<TeamModel>> call=iteam.getTeams();
-
-        call.enqueue((new Callback<List<TeamModel>>() {
+        btn=findViewById(R.id.home_page);
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(Call<List<TeamModel>> call, Response<List<TeamModel>> response) {
-                if(!response.isSuccessful()){
-                    tv.setText(response.code());
-                    return;
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, HomePage.class);//Optional parameters
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
 
-                }
-                List<TeamModel> teams=response.body();
-                System.out.println(response.body());
-                for (TeamModel team:teams){
-                    String content="";
-                    content+=team.getName();
-                    tv.append(content);
-                    System.out.println(team);
-                }
-            }
-            @Override
-            public void onFailure(Call<List<TeamModel>> call, Throwable t) {
-                tv.setText(t.getMessage());
-                System.out.println(t.getMessage());
-            }
-        }));
+
     }
 }
