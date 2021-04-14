@@ -19,6 +19,20 @@
     android:layout_height="match_parent"
     tools:context=".view.FixturePage">
 
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never"
+
+
+        >
+    </androidx.viewpager.widget.ViewPager>
+
 </LinearLayout>
 
 </layout>

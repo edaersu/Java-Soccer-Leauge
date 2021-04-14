@@ -1,10 +1,12 @@
 package com.example.soccer_leauge.viewModel;
 
 import android.util.Log;
+
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-import com.example.soccer_leauge.api.Api;
-import com.example.soccer_leauge.api.ITeam;
+import com.example.soccer_leauge.service.Api;
+import com.example.soccer_leauge.service.ITeamService;
 import com.example.soccer_leauge.model.TeamModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -20,9 +22,14 @@ public class TeamsViewModel extends ViewModel {
 
     MutableLiveData<List<TeamModel>> mteam=new MutableLiveData<>();
     List<TeamModel> teams_list=new ArrayList<TeamModel>();
+    public LiveData<List<TeamModel>> getAllTeams(){
+        if(mteam==null){
+            getTeams();
+        }
+        return mteam;
+    }
 
     public MutableLiveData<List<TeamModel>> getTeams() {
-
         if(mteam==null){
             return new MutableLiveData<>();
         }
@@ -33,7 +40,7 @@ public class TeamsViewModel extends ViewModel {
         Api api = new Api();
         Retrofit retrofit = new Retrofit.Builder().baseUrl(api.getApi()).addConverterFactory(GsonConverterFactory.create(gson)).build();
 
-        ITeam iteam = retrofit.create(ITeam.class);
+        ITeamService iteam = retrofit.create(ITeamService.class);
         Call<List<TeamModel>> call = iteam.getTeams();
 
         call.enqueue((new Callback<List<TeamModel>>() {
