@@ -1,23 +1,18 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-
 android {
-    compileSdkVersion 30
+    compileSdkVersion 28
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.example.soccer_leauge"
-        minSdkVersion 26
-        targetSdkVersion 30
+        minSdkVersion 24
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    dataBinding{
-        enabled=true
-    }
 
     buildTypes {
         release {
@@ -35,14 +30,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.1.17'
-
-
-
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation "android.arch.lifecycle:extensions:1.1.1"
    
 

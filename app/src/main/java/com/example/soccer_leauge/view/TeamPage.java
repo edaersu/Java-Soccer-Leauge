@@ -1,13 +1,17 @@
 package com.example.soccer_leauge.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.Toolbar;
@@ -27,16 +31,35 @@ public class TeamPage extends AppCompatActivity {
     private TeamsViewModel teamViewModel;
     public Toolbar toolbar;
     public Switch mode_switch;
+    boolean isDark=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_home_page);
+         setContentView(R.layout.activity_team_page);
+        mode_switch=findViewById(R.id.switch_dark_mode);
+        mode_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton cb, boolean on){
+                if(on)
+                {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    isDark=true;
+                }
+                else
+                {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+
+            }
+
+        });
+        getDelegate().installViewFactory();
+        getDelegate().onCreate(savedInstanceState);
+
 
         teamViewModel=ViewModelProviders.of(this).get(TeamsViewModel.class);
-
         teamViewModel.getTeams().observe(this, new Observer<List<TeamModel>>() {
-
             @Override
             public void onChanged(List<TeamModel> teamModels) {
                 System.out.println(teamModels.size());
@@ -50,8 +73,9 @@ public class TeamPage extends AppCompatActivity {
         btn_fikstur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(TeamPage.this, FixturePage.class);//Optional parameters
-                TeamPage.this.startActivity(myIntent);
+                    Intent myIntent = new Intent(TeamPage.this, FixturePage.class);//Optional parameters
+                myIntent.putExtra("dark_mode", isDark);
+                    TeamPage.this.startActivity(myIntent);
             }
         });
     }
@@ -73,7 +97,6 @@ public class TeamPage extends AppCompatActivity {
         for (TeamModel t:teamModels ) {
             team_names_list.add(t.getName());
         }
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.team_item, team_names_list);
         listemiz.setAdapter(adapter);
     }

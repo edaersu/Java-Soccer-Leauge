@@ -9,24 +9,23 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_marginTop="100dp"
-        android:textColor="#ffffff"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Süper Lig 2020-2021 Sezonu"/>
-
     <pl.droidsonroids.gif.GifImageView
-        android:paddingBottom="30dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/splash_ball"
         android:layout_weight="20"
         android:layout_width="100dp"
         android:layout_height="100dp">
 
-
     </pl.droidsonroids.gif.GifImageView>
+
+    <TextView
+        android:layout_marginBottom="70dp"
+        android:textColor="@color/text_color_header"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_text"/>
 
 </LinearLayout>

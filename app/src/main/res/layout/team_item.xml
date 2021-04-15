@@ -3,6 +3,7 @@
     android:id="@+id/teamname"
     android:text="deneme"
     android:gravity="center"
+    android:textColor="@color/text_color"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textSize="15dp" />

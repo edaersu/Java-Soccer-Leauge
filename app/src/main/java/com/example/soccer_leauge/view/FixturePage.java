@@ -1,12 +1,15 @@
 package com.example.soccer_leauge.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.NumberPicker;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -20,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 import pl.droidsonroids.gif.GifImageView;
 
-
 public class FixturePage extends AppCompatActivity {
 
     public Toolbar toolbar;
@@ -30,11 +32,18 @@ public class FixturePage extends AppCompatActivity {
     private FixtureViewModel weekmodel;
     public GifImageView animation;
     TextView week_number;
+    boolean isDark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fixture_page);
+        Bundle bundle = getIntent().getExtras();
+       isDark = bundle.getBoolean("dark_mode");
+
+
+        getDelegate().installViewFactory();
+        getDelegate().onCreate(savedInstanceState);
 
         weekmodel = ViewModelProviders.of(this).get(FixtureViewModel.class);
         weekmodel.getWeekly().observe(this, new Observer<List<List<WeekMatchesModel>>>() {
@@ -62,11 +71,12 @@ public class FixturePage extends AppCompatActivity {
         viewPager=findViewById(R.id.viewPager);
         toolbar=findViewById(R.id.toolbar);
         mode_switch=findViewById(R.id.switch_dark_mode);
+        mode_switch.setChecked(isDark);
 
         myAdapter=new FixtureAdapter(FixturePage.this,lists);
         viewPager.setAdapter(myAdapter);
         viewPager.setPadding(100,0,100,0);
-        viewPager.setCurrentItem(24);
+        viewPager.setCurrentItem(33);
 
         animation.setVisibility(View.GONE);
         viewPager.setVisibility(View.VISIBLE);
@@ -78,7 +88,13 @@ public class FixturePage extends AppCompatActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 week_number=findViewById(R.id.week_number);
-                week_number.setText(String.valueOf(position+1)+" . Hafta");
+                if(position<=20){
+                    week_number.setText("1. Devre / "+String.valueOf(position+1)+" . Hafta");
+                }
+                else{
+                    week_number.setText("2. Devre / "+String.valueOf(position+1)+" . Hafta");
+                }
+
             }
             @Override
             public void onPageSelected(int position) {

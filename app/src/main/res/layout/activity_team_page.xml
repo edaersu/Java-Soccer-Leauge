@@ -6,8 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".view.TeamPage">
 
     <Toolbar
@@ -21,10 +21,10 @@
             android:paddingRight="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="@color/text_color_header"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:text="Takım Listesi"/>
+            android:text="@string/team_list"/>
 
 
         <RelativeLayout
@@ -60,11 +60,9 @@
         android:layout_margin="15dp"
         android:layout_gravity="center"
         android:background="@drawable/list_view_border"
-        android:layout_weight="8"
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
 
     <Button
         android:visibility="invisible"
@@ -72,12 +70,11 @@
         android:background="@drawable/drawn_fixture_btn"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_weight="1"
-        android:textColor="#ffffff"
+        android:textColor="@color/text_color_header"
         android:id="@+id/fikstur"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Fikstür Çiz">
+        android:text="@string/drawn_fixture">
     </Button>
 
 </LinearLayout>

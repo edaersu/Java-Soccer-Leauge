@@ -9,6 +9,7 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".view.FixturePage">
 
 
@@ -23,11 +24,11 @@
             android:paddingRight="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="@color/text_color_header"
             android:textSize="20dp"
             android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:text="Haftalık Fikstür"/>
+            android:text="@string/weekly_fixture"/>
 
         <RelativeLayout
             android:layout_alignParentRight="true"
@@ -52,6 +53,7 @@
         android:layout_marginTop="15dp"
         android:id="@+id/week_number"
         android:gravity="center"
+        android:textColor="@color/text_color"
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
