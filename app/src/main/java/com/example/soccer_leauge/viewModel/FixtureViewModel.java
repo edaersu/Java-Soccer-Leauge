@@ -3,13 +3,11 @@ package com.example.soccer_leauge.viewModel;
 import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
 import com.example.soccer_leauge.service.Api;
 import com.example.soccer_leauge.service.IFixtureService;
 import com.example.soccer_leauge.model.WeekMatchesModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -65,7 +63,6 @@ public class FixtureViewModel extends ViewModel {
             catch (Exception e){
                 break;
             }
-
         }
 
         return mfixture;

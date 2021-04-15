@@ -48,9 +48,7 @@ public class TeamsViewModel extends ViewModel {
             public void onResponse(Call<List<TeamModel>> call, Response<List<TeamModel>> response) {
 
                 if (!response.isSuccessful()) {
-
                     return;
-
                 }
                 List<TeamModel> res = response.body();
                 List<TeamModel> teams = new ArrayList<TeamModel>();
@@ -61,7 +59,6 @@ public class TeamsViewModel extends ViewModel {
                     mteam.setValue(teams_list);
                 }
 
-
             }
 
             @Override
@@ -70,7 +67,6 @@ public class TeamsViewModel extends ViewModel {
                 System.out.println(t.getMessage());
             }
         }));
-
 
         return mteam;
 

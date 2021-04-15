@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -14,7 +12,6 @@ import android.widget.NumberPicker;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toolbar;
-
 import com.example.soccer_leauge.R;
 import com.example.soccer_leauge.adapter.FixtureAdapter;
 import com.example.soccer_leauge.model.WeekMatchesModel;
@@ -39,18 +36,29 @@ public class FixturePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fixture_page);
         Bundle bundle = getIntent().getExtras();
-       isDark = bundle.getBoolean("dark_mode");
+        isDark = bundle.getBoolean("dark_mode");
+        mode_switch=findViewById(R.id.switch_dark_mode);
+        mode_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton cb, boolean on){
+                if(on && !isDark)
+                {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    isDark=true;
+                }
 
 
+            }
+
+        });
         getDelegate().installViewFactory();
-        getDelegate().onCreate(savedInstanceState);
+        getDelegate().onCreate(savedInstanceState);;
 
         weekmodel = ViewModelProviders.of(this).get(FixtureViewModel.class);
         weekmodel.getWeekly().observe(this, new Observer<List<List<WeekMatchesModel>>>() {
             int i = 0;
             List<List<WeekMatchesModel>> fixture_table = new ArrayList<List<WeekMatchesModel>>();
             List<WeekMatchesModel> temp = new ArrayList<WeekMatchesModel>();
-
             @Override
             public void onChanged(List<List<WeekMatchesModel>> lists) {
                 if (lists.size() == 42) {

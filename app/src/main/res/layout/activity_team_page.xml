@@ -56,13 +56,16 @@
 
 
     <ListView
-        android:visibility="invisible"
         android:layout_margin="15dp"
+        android:visibility="invisible"
+        android:padding="15dp"
         android:layout_gravity="center"
         android:background="@drawable/list_view_border"
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+
 
     <Button
         android:visibility="invisible"
