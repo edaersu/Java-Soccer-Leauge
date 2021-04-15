@@ -15,12 +15,32 @@
 
 
 <LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.FixturePage">
 
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/week_number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="23.Hafta"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_marginTop="100dp"
+        android:id="@+id/progress_bar"
+        android:layout_gravity="center"
+        android:src="@drawable/ball2"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+    </pl.droidsonroids.gif.GifImageView>
+
+
     <androidx.viewpager.widget.ViewPager
-        android:layout_below="@+id/toolbar"
+        android:visibility="invisible"
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,6 +52,8 @@
 
         >
     </androidx.viewpager.widget.ViewPager>
+
+
 
 </LinearLayout>
 

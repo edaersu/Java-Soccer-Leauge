@@ -25,11 +25,13 @@ import com.example.soccer_leauge.viewModel.FixtureViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class TeamPage extends AppCompatActivity {
     public Button btn_fikstur;
     public  ListView listemiz;
     public TextView tv_header;
-    public ProgressBar progressBar;
+    public GifImageView animation;
 
     private ActivityHomePageBinding activityHomePageBinding;
     private TeamsViewModel denemviewmodel;
@@ -73,9 +75,9 @@ public class TeamPage extends AppCompatActivity {
         listemiz=findViewById(R.id.listview);
         btn_fikstur=findViewById(R.id.fikstur);
         tv_header=findViewById(R.id.takim_listesi_header);
-        progressBar=findViewById(R.id.progress_bar);
+        animation=findViewById(R.id.progress_bar);
 
-        progressBar.setVisibility(View.GONE);
+        animation.setVisibility(View.GONE);
         tv_header.setVisibility(View.VISIBLE);
         listemiz.setVisibility(View.VISIBLE);
         btn_fikstur.setVisibility(View.VISIBLE);
@@ -87,8 +89,8 @@ public class TeamPage extends AppCompatActivity {
             hello.add(t.getName());
         }
 
-        ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, R.layout.team_item, hello);
-        listemiz.setAdapter(mHistory);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.team_item, hello);
+        listemiz.setAdapter(adapter);
     }
 
 }
