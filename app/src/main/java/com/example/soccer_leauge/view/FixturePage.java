@@ -5,29 +5,28 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.NumberPicker;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.example.soccer_leauge.R;
 import com.example.soccer_leauge.adapter.FixtureAdapter;
-import com.example.soccer_leauge.databinding.ActivityFixturePageBinding;
 import com.example.soccer_leauge.model.WeekMatchesModel;
 import com.example.soccer_leauge.viewModel.FixtureViewModel;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import pl.droidsonroids.gif.GifImageView;
 
 
 public class FixturePage extends AppCompatActivity {
 
+    public Toolbar toolbar;
+    public Switch mode_switch;
     private FixtureAdapter myAdapter;
     ViewPager viewPager;
-    private ActivityFixturePageBinding activityFixturePageBinding;
     private FixtureViewModel weekmodel;
     public GifImageView animation;
     TextView week_number;
@@ -35,10 +34,8 @@ public class FixturePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_fixture_page);
+        setContentView(R.layout.activity_fixture_page);
 
-
-        activityFixturePageBinding = DataBindingUtil.setContentView(this, R.layout.activity_fixture_page);
         weekmodel = ViewModelProviders.of(this).get(FixtureViewModel.class);
         weekmodel.getWeekly().observe(this, new Observer<List<List<WeekMatchesModel>>>() {
             int i = 0;
@@ -63,6 +60,9 @@ public class FixturePage extends AppCompatActivity {
         week_number=findViewById(R.id.week_number);
         animation=findViewById(R.id.progress_bar);
         viewPager=findViewById(R.id.viewPager);
+        toolbar=findViewById(R.id.toolbar);
+        mode_switch=findViewById(R.id.switch_dark_mode);
+
         myAdapter=new FixtureAdapter(FixturePage.this,lists);
         viewPager.setAdapter(myAdapter);
         viewPager.setPadding(100,0,100,0);
@@ -71,6 +71,8 @@ public class FixturePage extends AppCompatActivity {
         animation.setVisibility(View.GONE);
         viewPager.setVisibility(View.VISIBLE);
         week_number.setVisibility(View.VISIBLE);
+        toolbar.setVisibility(View.VISIBLE);
+        mode_switch.setVisibility(View.VISIBLE);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

@@ -1,39 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-<data>
-    <variable
-        name="teamViewModel"
-        type="com.example.soccer_leauge.viewModel.TeamsViewModel" />
-</data>
-<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".view.TeamPage">
+
+    <Toolbar
+        android:visibility="invisible"
+        android:id="@+id/toolbar"
+        android:background="@drawable/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Takım Listesi"/>
+
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Switch
+                android:id="@+id/switch_dark_mode"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="UseSwitchCompatOrMaterialXml">
+
+            </Switch>
+        </RelativeLayout>
+
+    </Toolbar>
     <pl.droidsonroids.gif.GifImageView
         android:layout_marginTop="100dp"
         android:id="@+id/progress_bar"
         android:layout_gravity="center"
-        android:src="@drawable/ball2"
+        android:src="@drawable/progress_bar"
         android:layout_width="200dp"
         android:layout_height="200dp">
     </pl.droidsonroids.gif.GifImageView>
 
-    <TextView
-        android:id="@+id/takim_listesi_header"
-        android:visibility="invisible"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:text="Takım Listesi"/>
 
     <ListView
         android:visibility="invisible"
@@ -48,17 +68,17 @@
 
     <Button
         android:visibility="invisible"
-        android:layout_margin="10dp"
-        android:background="@color/colorAccent"
+        android:layout_margin="15dp"
+        android:background="@drawable/drawn_fixture_btn"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_weight="1"
+        android:textColor="#ffffff"
         android:id="@+id/fikstur"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Fikstür Çiz">
     </Button>
 
 </LinearLayout>
 
-</layout>

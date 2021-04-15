@@ -4,28 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/soccer_bg"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-<pl.droidsonroids.gif.GifImageView
-    android:src="@drawable/top_atan_adam"
-    android:layout_weight="20"
-    android:layout_width="match_parent"
-    android:layout_height="200dp">
+    <TextView
+        android:layout_marginTop="100dp"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Süper Lig 2020-2021 Sezonu"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:paddingBottom="30dp"
+        android:src="@drawable/splash_ball"
+        android:layout_weight="20"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
 
 
-</pl.droidsonroids.gif.GifImageView>
-
-    <Button
-        android:layout_margin="20dp"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:id="@+id/home_page"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
-        android:text="Ana Sayfa">
-
-
-    </Button>
+    </pl.droidsonroids.gif.GifImageView>
 
 </LinearLayout>
