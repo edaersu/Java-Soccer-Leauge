@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="onn" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f4466d22-4db6-49ac-b633-7fe3775d3b75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="2VN5T18428012053" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="resourceFile" />
+        <option value="valueResourceFile" />
+        <option value="layoutResourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\Eda\Projects\AndroidStudioJavaProjects\jks\soccer_leauge.jks" />
+    <option name="KEY_ALIAS" value="soccer_leauge" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1r5jMjj6LPcs81S5ATsDFwyPr2D" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="app" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-15T20:50:47.996Z" />
+    <property name="ExportApk.ApkPath" value="C:\Users\Eda\Projects\AndroidStudioJavaProjects\soccer_leauge\app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/sdksrc" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-949171478">
+      <recent name="com.example.soccer_leauge.view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eda\Projects\AndroidStudioJavaProjects\soccer_leauge\app\src\main\res\drawable" />
+    </key>
+    <key name="android.template.-1740302848">
+      <recent name="com.example.soccer_leauge.view" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eda\Projects\AndroidStudioJavaProjects\soccer_leauge\app\src\main\res\drawable" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4466d22-4db6-49ac-b633-7fe3775d3b75" name="Default Changelist" comment="" />
+      <created>1618272798468</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618272798468</updated>
+    </task>
+    <task id="LOCAL-00001" summary="dependencies added and mvvm structure created">
+      <created>1618273540306</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618273540306</updated>
+    </task>
+    <task id="LOCAL-00002" summary="structure for the team list has been implemented">
+      <created>1618273928803</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618273928803</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&quot;get&quot; request created for team list">
+      <created>1618274306661</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618274306661</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;get&quot; request created for weekly matches list">
+      <created>1618317341473</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618317341473</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Edited view model files">
+      <created>1618357673283</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618357673283</updated>
+    </task>
+    <task id="LOCAL-00006" summary="data have been displayed in ui basicly">
+      <created>1618441700008</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618441700009</updated>
+    </task>
+    <task id="LOCAL-00007" summary="animation is added">
+      <created>1618452701762</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1618452701762</updated>
+    </task>
+    <task id="LOCAL-00008" summary="splash-team-fixture page's ui edited and app icon added">
+      <created>1618488180454</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1618488180454</updated>
+    </task>
+    <task id="LOCAL-00009" summary="dark mode added">
+      <created>1618525349738</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1618525349738</updated>
+    </task>
+    <task id="LOCAL-00010" summary="edited ui">
+      <created>1618529689597</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1618529689597</updated>
+    </task>
+    <task id="LOCAL-00011" summary="the app signed and a release apk created">
+      <created>1618530278801</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1618530278802</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dependencies added and mvvm structure created" />
+    <MESSAGE value="structure for the team list has been implemented" />
+    <MESSAGE value="&quot;get&quot; request created for team list" />
+    <MESSAGE value="&quot;get&quot; request created for weekly matches list" />
+    <MESSAGE value="Edited view model files" />
+    <MESSAGE value="data have been displayed in ui basicly" />
+    <MESSAGE value="animation is added" />
+    <MESSAGE value="splash-team-fixture page's ui edited and app icon added" />
+    <MESSAGE value="dark mode added" />
+    <MESSAGE value="edited ui" />
+    <MESSAGE value="the app signed and a release apk created" />
+    <option name="LAST_COMMIT_MESSAGE" value="the app signed and a release apk created" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="29" key="#com.intellij.ide.util.MemberChooser" timestamp="1618490458067">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="446" y="29" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1618490458067" />
+    <state x="257" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618357384803">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="257" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1618357384803" />
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618482699771">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1618482699771" />
+    <state x="221" y="100" key="AndroidCreateResourceFileDialog" timestamp="1618523204660">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="221" y="100" key="AndroidCreateResourceFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1618523204660" />
+    <state x="500" y="158" key="AndroidCreateXmlResourceDialog" timestamp="1618492440854">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="500" y="158" key="AndroidCreateXmlResourceDialog/0.0.1280.689@0.0.1280.689" timestamp="1618492440854" />
+    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1618536502262">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1618536502262" />
+    <state x="122" y="51" key="DiffContextDialog" timestamp="1618273446706">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="122" y="51" key="DiffContextDialog/0.0.1280.689@0.0.1280.689" timestamp="1618273446706" />
+    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1618536689153">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1618536689153" />
+    <state x="492" y="219" key="Github.ShareDialog" timestamp="1618273354187">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="492" y="219" key="Github.ShareDialog/0.0.1280.689@0.0.1280.689" timestamp="1618273354187" />
+    <state x="353" y="51" key="Github.UntrackedFilesDialog" timestamp="1618273368001">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="353" y="51" key="Github.UntrackedFilesDialog/0.0.1280.689@0.0.1280.689" timestamp="1618273368001" />
+    <state width="1236" height="110" key="GridCell.Tab.0.bottom" timestamp="1618536690552">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1236" height="110" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1618536690552" />
+    <state width="1236" height="110" key="GridCell.Tab.0.center" timestamp="1618536690551">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1236" height="110" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1618536690551" />
+    <state width="1236" height="110" key="GridCell.Tab.0.left" timestamp="1618536690551">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1236" height="110" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1618536690551" />
+    <state width="1236" height="110" key="GridCell.Tab.0.right" timestamp="1618536690551">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1236" height="110" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1618536690551" />
+    <state width="1236" height="447" key="GridCell.Tab.1.bottom" timestamp="1618498598554">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1236" height="447" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1618498598554" />
+    <state width="1236" height="447" key="GridCell.Tab.1.center" timestamp="1618498598554">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1236" height="447" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1618498598554" />
+    <state width="1236" height="447" key="GridCell.Tab.1.left" timestamp="1618498598554">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1236" height="447" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1618498598554" />
+    <state width="1236" height="447" key="GridCell.Tab.1.right" timestamp="1618498598554">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1236" height="447" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1618498598554" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1618487822528">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1618487822528" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1618530288443">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1618530288443" />
+    <state x="452" y="123" key="chooseDestDirectoryDialog" timestamp="1618435287897">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="452" y="123" key="chooseDestDirectoryDialog/0.0.1280.689@0.0.1280.689" timestamp="1618435287897" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1618409620558">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1618409620558" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="teams" language="JAVA" />
+        <watch expression="response" language="JAVA" />
+        <watch expression="week" language="JAVA" />
+        <watch expression="mfixture" language="JAVA" />
+        <watch expression="lists" language="JAVA" />
+        <watch expression="live_team_data" language="JAVA" />
+        <watch expression="team_name_list_str" language="JAVA" />
+        <watch expression="fixture_table" language="JAVA" />
+        <watch expression="weeks" language="JAVA" />
+        <watch expression="table_week" language="JAVA" />
+        <watch expression="res_week" language="JAVA" />
+        <watch expression="response" language="JAVA" />
+        <watch expression="hash_fixture" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
