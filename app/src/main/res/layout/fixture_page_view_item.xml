@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_vertical"
 android:background="@color/background_color"
@@ -12,19 +12,19 @@ android:background="@color/background_color"
         android:layout_margin="10dp"
         app:cardCornerRadius="8dp"
         android:layout_width="match_parent"
-        android:layout_height="495dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:background="@drawable/list_view_border"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_marginTop="10dp"
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
 
 

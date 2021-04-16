@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +9,6 @@
     android:background="@color/background_color"
     android:orientation="vertical"
     tools:context=".view.TeamPage">
-
     <Toolbar
         android:visibility="invisible"
         android:id="@+id/toolbar"
@@ -45,6 +44,7 @@
         </RelativeLayout>
 
     </Toolbar>
+
     <pl.droidsonroids.gif.GifImageView
         android:layout_marginTop="100dp"
         android:id="@+id/progress_bar"
@@ -56,8 +56,9 @@
 
 
     <ListView
-        android:layout_margin="15dp"
         android:visibility="invisible"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="15dp"
         android:padding="15dp"
         android:layout_gravity="center"
         android:background="@drawable/list_view_border"
@@ -65,20 +66,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
-
     <Button
         android:visibility="invisible"
-        android:layout_margin="15dp"
+        android:layout_below="@id/listview"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="15dp"
         android:background="@drawable/drawn_fixture_btn"
         android:layout_gravity="center"
         android:gravity="center"
         android:textColor="@color/text_color_header"
         android:id="@+id/fikstur"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:text="@string/drawn_fixture">
     </Button>
 
-</LinearLayout>
+</RelativeLayout>
 

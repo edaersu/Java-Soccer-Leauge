@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -42,14 +42,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:ignore="UseSwitchCompatOrMaterialXml">
-
             </Switch>
         </RelativeLayout>
-
-
     </Toolbar>
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_marginTop="100dp"
+        android:id="@+id/progress_bar"
+        android:layout_gravity="center"
+        android:src="@drawable/progress_bar"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+    </pl.droidsonroids.gif.GifImageView>
     <TextView
         android:visibility="invisible"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentBottom="@+id/toolbar"
         android:layout_marginTop="15dp"
         android:id="@+id/week_number"
         android:gravity="center"
@@ -59,21 +66,13 @@
         android:layout_height="wrap_content"
         android:text="23.Hafta"/>
 
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_marginTop="100dp"
-        android:id="@+id/progress_bar"
-        android:layout_gravity="center"
-        android:src="@drawable/progress_bar"
-        android:layout_width="200dp"
-        android:layout_height="200dp">
-    </pl.droidsonroids.gif.GifImageView>
-
 
     <androidx.viewpager.widget.ViewPager
         android:visibility="invisible"
+        android:layout_below="@+id/week_number"
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:clipToPadding="false"
         android:foregroundGravity="center"
@@ -85,4 +84,4 @@
 
 
 
-</LinearLayout>
+</RelativeLayout>
